@@ -1,0 +1,212 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" style="background:#060810">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3A4560"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#FF6B35"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#00FF88"/>
+    </marker>
+    <filter id="glow-sm">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-lg">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1a2030" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background grid -->
+  <rect width="900" height="620" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-family="'Exo 2', sans-serif" font-size="22" font-weight="900" fill="#FF6B35" letter-spacing="6" filter="url(#glow-sm)">FORGE</text>
+  <text x="450" y="54" text-anchor="middle" font-family="monospace" font-size="10" fill="#4A5468" letter-spacing="3">AUTONOMOUS AI SOFTWARE FACTORY · AGENT SWARMS THEME</text>
+
+  <!-- INPUT BOX -->
+  <rect x="30" y="80" width="160" height="70" rx="8" fill="#111520" stroke="#FF6B35" stroke-width="1.5"/>
+  <text x="110" y="108" text-anchor="middle" font-family="monospace" font-size="9" fill="#FF6B35" letter-spacing="1">USER INPUT</text>
+  <text x="110" y="124" text-anchor="middle" font-family="monospace" font-size="8" fill="#7A859E">"Build a SaaS portal</text>
+  <text x="110" y="136" text-anchor="middle" font-family="monospace" font-size="8" fill="#7A859E">with auth &amp; analytics"</text>
+
+  <!-- Arrow: Input → Director -->
+  <line x1="190" y1="115" x2="260" y2="115" stroke="#FF6B35" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <text x="225" y="108" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF6B35">POST /api/build</text>
+
+  <!-- PRODUCTION DIRECTOR (center-top) -->
+  <rect x="262" y="80" width="178" height="72" rx="8" fill="#1a0e08" stroke="#FF6B35" stroke-width="2"/>
+  <text x="351" y="105" text-anchor="middle" font-family="monospace" font-size="9" fill="#FF6B35" font-weight="bold" letter-spacing="1">PRODUCTION DIRECTOR</text>
+  <text x="351" y="120" text-anchor="middle" font-family="monospace" font-size="8" fill="#7A859E">Orchestrates all agents</text>
+  <text x="351" y="134" text-anchor="middle" font-family="monospace" font-size="8" fill="#7A859E">SSE streaming · Redis pub/sub</text>
+  <circle cx="351" cy="116" r="32" fill="none" stroke="#FF6B35" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.4"/>
+
+  <!-- REDIS -->
+  <rect x="490" y="86" width="100" height="46" rx="6" fill="#0e1520" stroke="#3A4560" stroke-width="1"/>
+  <text x="540" y="107" text-anchor="middle" font-family="monospace" font-size="9" fill="#06B6D4" letter-spacing="1">REDIS</text>
+  <text x="540" y="120" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">Event bus · State</text>
+  <line x1="440" y1="109" x2="490" y2="109" stroke="#3A4560" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <!-- STAGE LABELS -->
+  <text x="70" y="175" font-family="monospace" font-size="8" fill="#3A4560" letter-spacing="2">STAGE 1</text>
+  <text x="270" y="175" font-family="monospace" font-size="8" fill="#3A4560" letter-spacing="2">STAGE 2</text>
+  <text x="490" y="175" font-family="monospace" font-size="8" fill="#3A4560" letter-spacing="2">STAGE 3</text>
+  <text x="700" y="175" font-family="monospace" font-size="8" fill="#3A4560" letter-spacing="2">STAGE 4</text>
+
+  <!-- Stage dividers -->
+  <line x1="245" y1="170" x2="245" y2="580" stroke="#1F253A" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="460" y1="170" x2="460" y2="580" stroke="#1F253A" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="680" y1="170" x2="680" y2="580" stroke="#1F253A" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ===== AGENT NODES ===== -->
+
+  <!-- PLANNER (Stage 1) -->
+  <rect x="40" y="195" width="160" height="68" rx="8" fill="#081018" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="120" y="218" text-anchor="middle" font-family="monospace" font-size="9" fill="#38BDF8" font-weight="bold">PLANNER AGENT</text>
+  <text x="120" y="232" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">User stories · Tech stack</text>
+  <text x="120" y="245" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">Modules · Complexity estimate</text>
+
+  <!-- ARCHITECT (Stage 2) -->
+  <rect x="265" y="195" width="165" height="68" rx="8" fill="#100c1a" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="347" y="218" text-anchor="middle" font-family="monospace" font-size="9" fill="#A78BFA" font-weight="bold">ARCHITECT AGENT</text>
+  <text x="347" y="232" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">System design · API schema</text>
+  <text x="347" y="245" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">DB schema · Folder structure</text>
+
+  <!-- RISK PRE-ASSESS (Stage 2, parallel) -->
+  <rect x="265" y="278" width="165" height="52" rx="8" fill="#1a0a0a" stroke="#EF4444" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="347" y="300" text-anchor="middle" font-family="monospace" font-size="9" fill="#EF4444" font-weight="bold">RISK AGENT</text>
+  <text x="347" y="315" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">Pre-assessment (parallel)</text>
+
+  <!-- DEVELOPER (Stage 3) -->
+  <rect x="475" y="195" width="170" height="80" rx="8" fill="#081810" stroke="#34D399" stroke-width="1.5"/>
+  <text x="560" y="218" text-anchor="middle" font-family="monospace" font-size="9" fill="#34D399" font-weight="bold">DEVELOPER AGENT</text>
+  <text x="560" y="232" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">Generates full codebase</text>
+  <text x="560" y="246" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">API routes · Models · Auth</text>
+  <text x="560" y="260" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#34D399">claude-sonnet-4</text>
+
+  <!-- SECURITY (Stage 3 output / Stage 4 input) -->
+  <rect x="475" y="292" width="165" height="52" rx="8" fill="#1a0814" stroke="#F472B6" stroke-width="1.5"/>
+  <text x="557" y="314" text-anchor="middle" font-family="monospace" font-size="9" fill="#F472B6" font-weight="bold">SECURITY AGENT</text>
+  <text x="557" y="329" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">OWASP Top 10 · Secret scan · CWE</text>
+
+  <!-- QA (Stage 4, parallel with Security) -->
+  <rect x="695" y="195" width="165" height="68" rx="8" fill="#181308" stroke="#FBBF24" stroke-width="1.5"/>
+  <text x="777" y="218" text-anchor="middle" font-family="monospace" font-size="9" fill="#FBBF24" font-weight="bold">QA AGENT</text>
+  <text x="777" y="232" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">Unit + integration tests</text>
+  <text x="777" y="246" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">CI/CD pipeline · Coverage</text>
+
+  <!-- COMPLIANCE -->
+  <rect x="695" y="278" width="165" height="52" rx="8" fill="#180e06" stroke="#FB923C" stroke-width="1.5"/>
+  <text x="777" y="300" text-anchor="middle" font-family="monospace" font-size="9" fill="#FB923C" font-weight="bold">COMPLIANCE AGENT</text>
+  <text x="777" y="315" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">GDPR · SOC2 · Privacy by Design</text>
+
+  <!-- ===== STAGE 5: RISK + DEPLOY ===== -->
+  <text x="310" y="358" font-family="monospace" font-size="8" fill="#3A4560" letter-spacing="2">STAGE 5 — DECISION</text>
+  <text x="570" y="358" font-family="monospace" font-size="8" fill="#3A4560" letter-spacing="2">STAGE 6 — DEPLOY</text>
+  <line x1="460" y1="355" x2="460" y2="500" stroke="#1F253A" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <rect x="255" y="370" width="185" height="68" rx="8" fill="#1a0a0a" stroke="#EF4444" stroke-width="2"/>
+  <text x="347" y="393" text-anchor="middle" font-family="monospace" font-size="9" fill="#EF4444" font-weight="bold">RISK AGENT (FULL)</text>
+  <text x="347" y="408" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">GO / NO_GO / WITH_CONDITIONS</text>
+  <text x="347" y="422" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">Aggregates all findings</text>
+
+  <rect x="475" y="370" width="175" height="68" rx="8" fill="#061418" stroke="#06B6D4" stroke-width="2"/>
+  <text x="562" y="393" text-anchor="middle" font-family="monospace" font-size="9" fill="#06B6D4" font-weight="bold">DEPLOYMENT AGENT</text>
+  <text x="562" y="408" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4A5468">Container build · Azure deploy</text>
+  <text x="562" y="422" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#06B6D4">Live URL · Health checks</text>
+
+  <!-- ===== OUTPUT BOX ===== -->
+  <rect x="30" y="480" width="840" height="118" rx="10" fill="#0a1008" stroke="#00FF88" stroke-width="1.5"/>
+  <text x="450" y="500" text-anchor="middle" font-family="monospace" font-size="9" fill="#00FF88" letter-spacing="3">FORGE OUTPUT ARTIFACTS</text>
+
+  <!-- Output items -->
+  <rect x="46" y="510" width="120" height="72" rx="6" fill="#111520" stroke="#34D399" stroke-width="1"/>
+  <text x="106" y="530" text-anchor="middle" font-family="monospace" font-size="8" fill="#34D399">CODEBASE</text>
+  <text x="106" y="544" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">6-10 source files</text>
+  <text x="106" y="558" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">Prod-ready code</text>
+  <text x="106" y="572" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">Dockerfile incl.</text>
+
+  <rect x="180" y="510" width="120" height="72" rx="6" fill="#111520" stroke="#A78BFA" stroke-width="1"/>
+  <text x="240" y="530" text-anchor="middle" font-family="monospace" font-size="8" fill="#A78BFA">ARCHITECTURE</text>
+  <text x="240" y="544" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">Components diagram</text>
+  <text x="240" y="558" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">API endpoints</text>
+  <text x="240" y="572" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">DB schema</text>
+
+  <rect x="314" y="510" width="120" height="72" rx="6" fill="#111520" stroke="#F472B6" stroke-width="1"/>
+  <text x="374" y="530" text-anchor="middle" font-family="monospace" font-size="8" fill="#F472B6">SEC REPORT</text>
+  <text x="374" y="544" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">OWASP findings</text>
+  <text x="374" y="558" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">CWE mapping</text>
+  <text x="374" y="572" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">Remediations</text>
+
+  <rect x="448" y="510" width="120" height="72" rx="6" fill="#111520" stroke="#FBBF24" stroke-width="1"/>
+  <text x="508" y="530" text-anchor="middle" font-family="monospace" font-size="8" fill="#FBBF24">TEST SUITE</text>
+  <text x="508" y="544" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">pytest / jest files</text>
+  <text x="508" y="558" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">CI pipeline YAML</text>
+  <text x="508" y="572" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">Coverage estimate</text>
+
+  <rect x="582" y="510" width="120" height="72" rx="6" fill="#111520" stroke="#FB923C" stroke-width="1"/>
+  <text x="642" y="530" text-anchor="middle" font-family="monospace" font-size="8" fill="#FB923C">COMPLIANCE</text>
+  <text x="642" y="544" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">GDPR status</text>
+  <text x="642" y="558" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">SOC2 controls</text>
+  <text x="642" y="572" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">Privacy score</text>
+
+  <rect x="716" y="510" width="138" height="72" rx="6" fill="#081418" stroke="#06B6D4" stroke-width="1.5"/>
+  <text x="785" y="530" text-anchor="middle" font-family="monospace" font-size="8" fill="#06B6D4">DEPLOYMENT</text>
+  <text x="785" y="544" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">Live URL</text>
+  <text x="785" y="558" text-anchor="middle" font-family="monospace" font-size="7" fill="#06B6D4">https://app.forge.app</text>
+  <text x="785" y="572" text-anchor="middle" font-family="monospace" font-size="7" fill="#4A5468">Health: passing ✓</text>
+
+  <!-- ===== FLOW ARROWS ===== -->
+  <!-- Director → Planner -->
+  <path d="M 351 152 L 351 162 L 120 162 L 120 195" fill="none" stroke="#FF6B35" stroke-width="1.2" marker-end="url(#arrow-orange)"/>
+  <!-- Director → Architect -->
+  <path d="M 351 152 L 351 162 L 347 162 L 347 195" fill="none" stroke="#FF6B35" stroke-width="1.2" marker-end="url(#arrow-orange)"/>
+  <!-- Director → Risk pre -->
+  <path d="M 351 152 L 351 268 L 347 268 L 347 278" fill="none" stroke="#FF6B35" stroke-width="1" stroke-dasharray="4 2" marker-end="url(#arrow-orange)"/>
+
+  <!-- Planner → Developer -->
+  <path d="M 200 229 L 240 229 L 240 235 L 475 235" fill="none" stroke="#38BDF8" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <!-- Architect → Developer -->
+  <path d="M 430 229 L 475 229" fill="none" stroke="#A78BFA" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Developer → Security -->
+  <path d="M 560 275 L 560 292" fill="none" stroke="#34D399" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <!-- Developer → QA -->
+  <path d="M 645 235 L 695 235" fill="none" stroke="#34D399" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Security → Compliance -->
+  <path d="M 640 318 L 670 318 L 670 304 L 695 304" fill="none" stroke="#F472B6" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Security + QA + Compliance → Risk -->
+  <path d="M 557 344 L 557 350 L 347 350 L 347 370" fill="none" stroke="#4A5468" stroke-width="1" marker-end="url(#arrow)"/>
+  <path d="M 777 346 L 777 355 L 430 355 L 430 404 L 440 404" fill="none" stroke="#4A5468" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Risk → Deploy -->
+  <path d="M 440 404 L 460 404 L 460 404 L 475 404" fill="none" stroke="#EF4444" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="462" y="397" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#EF4444">GO ✓</text>
+
+  <!-- Deploy → Output -->
+  <path d="M 562 438 L 562 460 L 450 460 L 450 480" fill="none" stroke="#00FF88" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <!-- Parallel execution bracket -->
+  <rect x="468" y="186" width="406" height="166" rx="6" fill="none" stroke="#34D399" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.4"/>
+  <text x="875" y="225" text-anchor="end" font-family="monospace" font-size="7" fill="#34D399" opacity="0.6">PARALLEL</text>
+  <text x="875" y="236" text-anchor="end" font-family="monospace" font-size="7" fill="#34D399" opacity="0.6">EXECUTION</text>
+
+  <!-- Score indicators -->
+  <text x="810" y="430" font-family="monospace" font-size="8" fill="#4A5468">SCORES</text>
+  <text x="810" y="444" font-family="monospace" font-size="9" fill="#00FF88">QUALITY 91</text>
+  <text x="810" y="458" font-family="monospace" font-size="9" fill="#F472B6">SECURITY 84</text>
+  <text x="810" y="472" font-family="monospace" font-size="9" fill="#FB923C">COMPLY  88</text>
+
+  <!-- Tech badges bottom -->
+  <text x="450" y="610" text-anchor="middle" font-family="monospace" font-size="8" fill="#3A4560" letter-spacing="3">
+    FASTAPI · REDIS · ANTHROPIC CLAUDE · REACT · VITE · DOCKER · AZURE CONTAINER APPS · GITHUB
+  </text>
+</svg>
