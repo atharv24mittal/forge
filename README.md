@@ -132,6 +132,15 @@ You type a business requirement. FORGE's 9-agent swarm autonomously delivers:
 ---
 
 ## Live Demo
+<img width="830" height="455" alt="Screenshot 2026-06-06 055258" src="https://github.com/user-attachments/assets/1e7fb922-d7f7-423d-8f35-99bea336e965" />
+<img width="822" height="454" alt="Screenshot 2026-06-06 055334" src="https://github.com/user-attachments/assets/95da1ea9-2e30-46f6-a337-c01ab9deb012" />
+<img width="665" height="454" alt="Screenshot 2026-06-06 055433" src="https://github.com/user-attachments/assets/efc3f445-b17c-414b-b1fc-52c938a7cc2f" />
+<img width="1495" height="1052" alt="image" src="https://github.com/user-attachments/assets/671ae4f4-3d00-4d1f-84d7-1e261b81f671" />
+<img width="665" height="461" alt="Screenshot 2026-06-06 055707" src="https://github.com/user-attachments/assets/33fc79cf-99fb-4ab1-8684-16b708ecb66f" />
+<img width="620" height="435" alt="Screenshot 2026-06-06 055735" src="https://github.com/user-attachments/assets/92854ee2-a989-4062-8c85-9d6ebc893a12" />
+<img width="620" height="247" alt="Screenshot 2026-06-06 055752" src="https://github.com/user-attachments/assets/8c5d1508-62a1-4e51-9985-776abf660f3f" />
+<img width="617" height="434" alt="Screenshot 2026-06-06 055814" src="https://github.com/user-attachments/assets/244fc181-8114-4d7c-8344-f4510e8a1291" />
+<img width="617" height="239" alt="Screenshot 2026-06-06 055829" src="https://github.com/user-attachments/assets/0082a690-7e9f-452d-a084-7bb613974d7b" />
 
 **Frontend:** `https://forge-ai.vercel.app`
 **Backend:** `https://forge-api.railway.app`
